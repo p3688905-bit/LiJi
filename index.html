@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>〈李寄〉文本解讀互動指引</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Noto Serif TC"', 'serif'],
+                        sans: ['"Noto Sans TC"', 'sans-serif'],
+                    },
+                    colors: {
+                        'classic-red': '#B91C1C',
+                        'classic-gold': '#D97706',
+                        'paper-bg': '#FDFBF7',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .chinese-pattern {
+            background-color: #FDFBF7;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e5e7eb' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        .stat-btn.active {
+            background-color: #D97706; /* classic-gold */
+            color: white;
+            transform: scale(1.05);
+            border-color: #FCD34D;
+        }
+        .stat-btn.active .text-xs {
+            color: #FEF3C7;
+        }
+    </style>
+</head>
+<body class="chinese-pattern text-slate-800 font-sans leading-relaxed">
+
+    <!-- Header -->
+    <header class="bg-classic-red text-white sticky top-0 z-50 shadow-lg">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-serif font-bold tracking-widest">〈李寄〉文本解讀</h1>
+            <nav class="hidden md:flex space-x-6 text-sm">
+                <a href="#overview" class="hover:text-yellow-200 transition">全文概覽</a>
+                <a href="#text-study" class="hover:text-yellow-200 transition">深入閱讀</a>
+                <a href="#hero-journey" class="hover:text-yellow-200 transition">英雄旅程</a>
+                <a href="#conclusion" class="hover:text-yellow-200 transition">總結</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="relative bg-slate-900 text-white py-16 px-4 text-center overflow-hidden">
+        <div class="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=2568&auto=format&fit=crop')] bg-cover bg-center"></div>
+        <div class="relative max-w-2xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-serif font-bold mb-4 text-shadow">斬蛇少女的英雄傳奇</h2>
+            <p class="text-lg text-gray-300">干寶《搜神記》經典選讀</p>
+            <div class="mt-8 flex justify-center gap-4">
+                <span class="px-3 py-1 bg-classic-red rounded-full text-xs font-bold uppercase tracking-wider">堅強</span>
+                <span class="px-3 py-1 bg-classic-red rounded-full text-xs font-bold uppercase tracking-wider">勇敢</span>
+                <span class="px-3 py-1 bg-classic-red rounded-full text-xs font-bold uppercase tracking-wider">智慧</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 py-12 space-y-16">
+
+        <!-- 1. Overview Section -->
+        <section id="overview" class="scroll-mt-20">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-1 h-8 bg-classic-red"></div>
+                <h3 class="text-2xl font-serif font-bold text-slate-900">全文主旨與結構</h3>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Theme Card -->
+                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-classic-red">
+                    <h4 class="font-bold text-lg mb-3 text-classic-red">核心主旨</h4>
+                    <p class="text-gray-700 mb-4">
+                        本篇通過「斬蛇」事件，歌頌並刻畫了一位堅強、勇敢、智慧的少女李寄。
+                    </p>
+                    <blockquote class="bg-gray-50 p-4 border-l-4 border-gray-300 italic text-gray-600 text-sm">
+                        干寶讚賞：「自是東冶無復妖邪之物」
+                    </blockquote>
+                </div>
+
+                <!-- Structure Card -->
+                <div class="bg-white p-6 rounded-lg shadow-md border-t-4 border-classic-gold">
+                    <h4 class="font-bold text-lg mb-3 text-classic-gold">結構分析</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="flex-shrink-0 w-6 h-6 bg-red-100 text-red-800 rounded-full flex items-center justify-center text-xs mr-3 font-bold">1</span>
+                            <div>
+                                <span class="font-bold text-gray-800">蛇的危害</span>
+                                <p class="text-xs text-gray-500">奪九女之命，官吏無能</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="flex-shrink-0 w-6 h-6 bg-red-100 text-red-800 rounded-full flex items-center justify-center text-xs mr-3 font-bold">2</span>
+                            <div>
+                                <span class="font-bold text-gray-800">為民除害</span>
+                                <p class="text-xs text-gray-500">自告奮勇，斬蛇經過</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="flex-shrink-0 w-6 h-6 bg-red-100 text-red-800 rounded-full flex items-center justify-center text-xs mr-3 font-bold">3</span>
+                            <div>
+                                <span class="font-bold text-gray-800">名揚四方</span>
+                                <p class="text-xs text-gray-500">李寄形象：可愛可敬、英勇無畏</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Text Study Section -->
+        <section id="text-study" class="scroll-mt-20 space-y-12">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-1 h-8 bg-classic-red"></div>
+                <h3 class="text-2xl font-serif font-bold text-slate-900">文本深度解讀</h3>
+            </div>
+
+            <!-- Paragraph 1 -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                <div class="bg-slate-100 px-6 py-3 border-b border-gray-200 flex justify-between items-center">
+                    <span class="font-bold text-slate-700">第一段：大蛇的危害</span>
+                    <span class="text-xs bg-slate-200 text-slate-600 px-2 py-1 rounded">背景介紹</span>
+                </div>
+                <div class="p-6">
+                    <div class="mb-6">
+                        <h5 class="text-sm font-bold text-gray-500 mb-2 uppercase tracking-wider">原文</h5>
+                        <p class="font-serif text-lg leading-8 text-gray-800">
+                            東越閩中有庸嶺，高數十里。其西北隙中，有大蛇，<span class="bg-red-50 text-red-800 px-1 rounded border-b-2 border-red-200">長七八丈，六十餘圍</span>。土俗常懼。東治都尉及屬城長吏，多有死者。祭以牛羊，故不得福。或與人夢，或下諭巫祝，欲得<span class="bg-red-50 text-red-800 px-1 rounded border-b-2 border-red-200">啗</span>童女年十二三者。
+                        </p>
+                    </div>
+
+                    <details class="group mb-6 bg-slate-50 rounded-lg border border-slate-200">
+                        <summary class="flex items-center justify-between cursor-pointer p-4 text-sm font-bold text-slate-700 hover:bg-slate-100 transition rounded-lg">
+                            <span>📖 查看白話翻譯</span>
+                            <svg class="w-4 h-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-4 pt-0 text-gray-600 text-base leading-relaxed border-t border-slate-200 mt-2">
+                            <p class="pt-4">東越閩中地區有一座庸嶺，高幾十里。它的西北方石縫中，有一條大蛇，長七八丈，大六十多圍。當地百姓常常害怕它。東冶的都尉和所屬城邑的長吏，很多人被蛇咬死。用牛羊去祭祀，仍舊得不到保佑。（大蛇）或者託夢給人，或者告訴巫祝，想要吃十二三歲的童女。</p>
+                        </div>
+                    </details>
+                    
+                    <!-- Accordion for Notes -->
+                    <details class="group mb-6">
+                        <summary class="flex items-center cursor-pointer text-sm text-blue-600 font-medium hover:text-blue-800">
+                            <svg class="w-4 h-4 mr-2 transition-transform group-open:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            查看重點註釋
+                        </summary>
+                        <div class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-gray-600 bg-blue-50 p-4 rounded-lg">
+                            <p><strong>東越：</strong>漢初小國，地在今浙江、福建一帶。</p>
+                            <p><strong>閩中：</strong>郡名。</p>
+                            <p><strong>圍：</strong>計算兩隻手的拇指和食指合圍的圓周長度的單位。</p>
+                            <p><strong>土俗：</strong>土著、世俗之人，指當地百姓。</p>
+                            <p><strong>東治：</strong>當作「東冶」。東越國都，在今福建福州市。</p>
+                            <p><strong>故不得福：</strong>仍舊不能免禍。</p>
+                            <p><strong>啗：</strong>音ㄉㄢˋ，吃，同「啖」。</p>
+                        </div>
+                    </details>
+
+                    <!-- Interactive Question -->
+                    <div class="border-l-4 border-classic-gold bg-yellow-50 p-4 rounded-r-lg">
+                        <p class="font-bold text-yellow-900 mb-2">🤔 思考問題：請舉出描寫大蛇外形的句子？</p>
+                        <button onclick="document.getElementById('ans1').classList.toggle('hidden')" class="text-xs bg-yellow-600 text-white px-3 py-1 rounded hover:bg-yellow-700 transition">顯示答案</button>
+                        <p id="ans1" class="hidden mt-2 text-red-700 font-serif font-bold animate-fade-in">「長七八丈，六十餘圍。」</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paragraph 2 -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                <div class="bg-slate-100 px-6 py-3 border-b border-gray-200 flex justify-between items-center">
+                    <span class="font-bold text-slate-700">第二段：犧牲與無能</span>
+                    <span class="text-xs bg-slate-200 text-slate-600 px-2 py-1 rounded">官吏無能</span>
+                </div>
+                <div class="p-6">
+                    <div class="mb-6">
+                        <h5 class="text-sm font-bold text-gray-500 mb-2 uppercase tracking-wider">原文</h5>
+                        <p class="font-serif text-lg leading-8 text-gray-800">
+                            都尉、令、長並共患之。然氣厲不息。共請求人<span class="bg-red-50 text-red-800 px-1 rounded border-b-2 border-red-200">家生婢子</span>，兼<span class="bg-red-50 text-red-800 px-1 rounded border-b-2 border-red-200">有罪家女</span>養之。至八月朝祭，送蛇穴口，蛇出，吞嚙之。累年如此，已用九女。
+                        </p>
+                    </div>
+
+                    <details class="group mb-6 bg-slate-50 rounded-lg border border-slate-200">
+                        <summary class="flex items-center justify-between cursor-pointer p-4 text-sm font-bold text-slate-700 hover:bg-slate-100 transition rounded-lg">
+                            <span>📖 查看白話翻譯</span>
+                            <svg class="w-4 h-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-4 pt-0 text-gray-600 text-base leading-relaxed border-t border-slate-200 mt-2">
+                            <p class="pt-4">都尉、縣令、縣長都把這件事當作禍患。然而大蛇的妖氣猛烈，不能止息。大家共同請求買人家奴婢生的女孩，加上犯罪人家的女兒來養育她們。到了八月初一祭祀的時候，送到蛇洞口，蛇出來，吞食了她。連年如此，已經用了九個女子。</p>
+                        </div>
+                    </details>
+                    
+                    <!-- Accordion for Notes -->
+                    <details class="group mb-6">
+                        <summary class="flex items-center cursor-pointer text-sm text-blue-600 font-medium hover:text-blue-800">
+                            <svg class="w-4 h-4 mr-2 transition-transform group-open:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            查看重點註釋
+                        </summary>
+                        <div class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-gray-600 bg-blue-50 p-4 rounded-lg">
+                            <p class="col-span-full"><strong>家生婢子：</strong>古代奴婢所生子女仍為奴婢，男的叫「家生奴」，女的叫「家生婢」。「子」，語尾詞。</p>
+                            <p><strong>朝：</strong>音ㄓㄠ，初一日。</p>
+                        </div>
+                    </details>
+
+                    <div class="border-l-4 border-classic-gold bg-yellow-50 p-4 rounded-r-lg">
+                        <p class="font-bold text-yellow-900 mb-2">🤔 思考問題：誰被送去給大蛇吃？</p>
+                        <button onclick="document.getElementById('ans2').classList.toggle('hidden')" class="text-xs bg-yellow-600 text-white px-3 py-1 rounded hover:bg-yellow-700 transition">顯示答案</button>
+                        <ul id="ans2" class="hidden mt-2 list-disc list-inside text-red-700 font-bold animate-fade-in">
+                            <li>家生婢子 (奴僕的女兒)</li>
+                            <li>有罪家女 (犯罪人家的女兒)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paragraph 3 -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                <div class="bg-slate-100 px-6 py-3 border-b border-gray-200 flex justify-between items-center">
+                    <span class="font-bold text-slate-700">第三段：李寄請纓</span>
+                    <span class="text-xs bg-slate-200 text-slate-600 px-2 py-1 rounded">關鍵轉折</span>
+                </div>
+                <div class="p-6">
+                    <div class="mb-6">
+                        <h5 class="text-sm font-bold text-gray-500 mb-2 uppercase tracking-wider">原文</h5>
+                        <p class="font-serif text-lg leading-8 text-gray-800">
+                            爾時，預復募索，未得其女。將樂縣李誕，家有六女，無男。其小女名寄，應募欲行。父母不聽。寄曰：「<span class="bg-red-50 text-red-800 px-1 rounded border-b-2 border-red-200">父母無相，惟生六女，無有一男，雖有如無。</span>女無緹縈濟父母之功，既不能供養，徒費衣食，生無所益，不如早死。賣寄之身，可得少錢，以供父母，豈不善耶？」父母慈憐，終不聽去。寄自潛行，不可禁止。
+                        </p>
+                    </div>
+
+                    <details class="group mb-6 bg-slate-50 rounded-lg border border-slate-200">
+                        <summary class="flex items-center justify-between cursor-pointer p-4 text-sm font-bold text-slate-700 hover:bg-slate-100 transition rounded-lg">
+                            <span>📖 查看白話翻譯</span>
+                            <svg class="w-4 h-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-4 pt-0 text-gray-600 text-base leading-relaxed border-t border-slate-200 mt-2">
+                            <p class="pt-4">那時，預先又要招募尋找童女，還沒有找到。將樂縣李誕，家裡有六個女兒，沒有兒子。他的小女兒叫李寄，應募想要去。父母不同意。李寄說：「父母沒有福氣，只生了六個女兒，沒有一個兒子，雖然有孩子就像沒有一樣。女兒沒有緹縈救父母的功勞，既然不能供養父母，白白花費衣食，活著沒有益處，不如早點死。賣掉我的身體，可以得到一點錢，用來供養父母，難道不好嗎？」父母慈愛憐惜她，始終不讓她去。李寄自己偷偷溜走，不能禁止。</p>
+                        </div>
+                    </details>
+                    
+                    <details class="group mb-6">
+                        <summary class="flex items-center cursor-pointer text-sm text-blue-600 font-medium hover:text-blue-800">
+                            <svg class="w-4 h-4 mr-2 transition-transform group-open:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            重點註釋
+                        </summary>
+                        <div class="mt-3 text-sm text-gray-600 bg-blue-50 p-4 rounded-lg">
+                            <p class="mb-2"><strong>無相：</strong>沒有福氣。</p>
+                            <p class="mb-2"><strong>緹縈：</strong>乃西漢時期著名的孝女，其父親為西漢時期的名醫淳于意。</p>
+                        </div>
+                    </details>
+
+                    <div class="border-l-4 border-classic-gold bg-yellow-50 p-4 rounded-r-lg">
+                        <p class="font-bold text-yellow-900 mb-2">🤔 思考問題：請指出文中表現「重男輕女」的部分？</p>
+                        <button onclick="document.getElementById('ans3').classList.toggle('hidden')" class="text-xs bg-yellow-600 text-white px-3 py-1 rounded hover:bg-yellow-700 transition">顯示答案</button>
+                        <p id="ans3" class="hidden mt-2 text-red-700 font-serif font-bold animate-fade-in">「父母無相，惟生六女，無有一男，雖有如無。」</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paragraph 4 -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                <div class="bg-slate-100 px-6 py-3 border-b border-gray-200 flex justify-between items-center">
+                    <span class="font-bold text-slate-700">第四段：智勇斬蛇</span>
+                    <span class="text-xs bg-red-600 text-white px-2 py-1 rounded font-bold">高潮</span>
+                </div>
+                <div class="p-6">
+                    <div class="mb-6">
+                        <h5 class="text-sm font-bold text-gray-500 mb-2 uppercase tracking-wider">原文</h5>
+                        <p class="font-serif text-lg leading-8 text-gray-800">
+                            寄乃告請<span class="font-bold text-red-700">好劍</span>及<span class="font-bold text-red-700">咋蛇犬</span>。至八月朝，便詣廟中坐，懷劍將犬。先將<span class="font-bold text-red-700">數石米餈，用蜜麨灌之</span>，以置穴口。蛇便出，頭大如囷，目如二尺鏡，聞餈香氣，先啗食之。寄便放犬，犬就嚙咋，寄從後斫得數創。瘡痛急，蛇因踊出，至庭而死。寄入視穴，得其九女髑髏，悉舉出，咤言曰：「<span class="bg-red-50 text-red-800 px-1 rounded border-b-2 border-red-200">汝曹怯弱，為蛇所食，甚可哀愍！</span>」於是寄女緩步而歸。
+                        </p>
+                    </div>
+
+                    <details class="group mb-6 bg-slate-50 rounded-lg border border-slate-200">
+                        <summary class="flex items-center justify-between cursor-pointer p-4 text-sm font-bold text-slate-700 hover:bg-slate-100 transition rounded-lg">
+                            <span>📖 查看白話翻譯</span>
+                            <svg class="w-4 h-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-4 pt-0 text-gray-600 text-base leading-relaxed border-t border-slate-200 mt-2">
+                            <p class="pt-4">李寄就請求得到好劍和會咬蛇的狗。到了八月初一，就到廟中坐著，懷裡藏著劍帶著狗。先把幾石米做的糍粑，用蜜糖炒的米粉灌拌它，放在洞口。蛇就出來了，頭大得像圓形穀倉，眼睛像二尺鏡子，聞到糍粑的香氣，先吃糍粑。李寄就放出狗，狗就上前咬，李寄從後面砍得幾個傷口。傷口痛得很厲害，蛇因此跳出來，到了庭院就死了。李寄進去探看洞穴，找到那九個女子的頭骨，全部舉出來，嘆息說：「你們這些人膽小軟弱，被蛇吃了，很值得哀憐！」於是李寄緩步回家。</p>
+                        </div>
+                    </details>
+                    
+                    <!-- Accordion for Notes -->
+                    <details class="group mb-6">
+                        <summary class="flex items-center cursor-pointer text-sm text-blue-600 font-medium hover:text-blue-800">
+                            <svg class="w-4 h-4 mr-2 transition-transform group-open:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                            查看重點註釋
+                        </summary>
+                        <div class="mt-3 grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-gray-600 bg-blue-50 p-4 rounded-lg">
+                            <p><strong>咋：</strong>音ㄗㄜˊ，咬。</p>
+                            <p><strong>米餈：</strong>用糯米做成的食品。餈，音ㄘˊ。</p>
+                            <p><strong>麨：</strong>音ㄔㄠˇ，一種將米、麥炒熟後磨粉製成的乾糧。</p>
+                            <p><strong>囷：</strong>音ㄐㄩㄣ，圓形穀倉。</p>
+                            <p><strong>創：</strong>音ㄔㄨㄤ，傷口。</p>
+                            <p><strong>瘡：</strong>音ㄔㄨㄤ，創傷、外傷。</p>
+                            <p><strong>髑髏：</strong>音ㄉㄨˊ ㄌㄡˊ，死人的頭骨。</p>
+                            <p><strong>咤：</strong>音ㄓㄚˋ，痛惜。</p>
+                        </div>
+                    </details>
+
+                    <!-- Strategy Breakdown -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <div class="bg-gray-50 p-3 rounded text-center border border-gray-200">
+                            <div class="text-2xl mb-1">🗡️ 🐕</div>
+                            <div class="font-bold text-gray-700">裝備</div>
+                            <div class="text-xs text-gray-500">好劍、咋蛇犬</div>
+                        </div>
+                        <div class="bg-gray-50 p-3 rounded text-center border border-gray-200">
+                            <div class="text-2xl mb-1">🍯 🍚</div>
+                            <div class="font-bold text-gray-700">誘餌</div>
+                            <div class="text-xs text-gray-500">數石米餈、蜜麨</div>
+                        </div>
+                        <div class="bg-gray-50 p-3 rounded text-center border border-gray-200">
+                            <div class="text-2xl mb-1">🗣️</div>
+                            <div class="font-bold text-gray-700">態度</div>
+                            <div class="text-xs text-gray-500">自信從容、緩步而歸</div>
+                        </div>
+                    </div>
+
+                    <div class="border-l-4 border-classic-gold bg-yellow-50 p-4 rounded-r-lg">
+                        <p class="font-bold text-yellow-900 mb-2">🤔 思考問題：哪句話最能傳神地表現出李寄自信從容的樣子？</p>
+                        <button onclick="document.getElementById('ans4').classList.toggle('hidden')" class="text-xs bg-yellow-600 text-white px-3 py-1 rounded hover:bg-yellow-700 transition">顯示答案</button>
+                        <p id="ans4" class="hidden mt-2 text-red-700 font-serif font-bold animate-fade-in">「汝曹怯弱，為蛇所食，甚可哀愍！」於是寄女緩步而歸。</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Paragraph 5: Epilogue (Added) -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                <div class="bg-slate-100 px-6 py-3 border-b border-gray-200 flex justify-between items-center">
+                    <span class="font-bold text-slate-700">第五段：結局與歌頌</span>
+                    <span class="text-xs bg-green-600 text-white px-2 py-1 rounded font-bold">圓滿結局</span>
+                </div>
+                <div class="p-6">
+                    <div class="mb-6">
+                        <h5 class="text-sm font-bold text-gray-500 mb-2 uppercase tracking-wider">原文</h5>
+                        <p class="font-serif text-lg leading-8 text-gray-800">
+                            越王聞之，聘寄女為后，拜其父為將樂令，母及姊皆有賞賜。自是東治無復妖邪之物，其歌謠至今存焉。
+                        </p>
+                    </div>
+
+                    <details class="group bg-slate-50 rounded-lg border border-slate-200">
+                        <summary class="flex items-center justify-between cursor-pointer p-4 text-sm font-bold text-slate-700 hover:bg-slate-100 transition rounded-lg">
+                            <span>📖 查看白話翻譯</span>
+                            <svg class="w-4 h-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <div class="p-4 pt-0 text-gray-600 text-base leading-relaxed border-t border-slate-200 mt-2">
+                            <p class="pt-4">越王聽說這件事，聘李寄為王后，任命她的父親做將樂縣令，母親和姐姐都有賞賜。從此東冶不再有妖邪的東西，歌頌她的歌謠流傳至今。</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- New Section: Character Stats (Interactive) -->
+        <section id="character-stats" class="scroll-mt-20">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-1 h-8 bg-classic-red"></div>
+                <h3 class="text-2xl font-serif font-bold text-slate-900">李寄角色數值分析</h3>
+            </div>
+            <div class="bg-slate-800 text-white rounded-xl shadow-lg p-6 md:p-8 max-w-2xl mx-auto relative overflow-hidden">
+                <!-- Decorative background -->
+                <div class="absolute top-0 right-0 w-32 h-32 bg-red-600 opacity-20 rounded-bl-full"></div>
+                
+                <div class="flex flex-col md:flex-row gap-8 items-center relative z-10">
+                    <!-- Avatar Placeholder -->
+                    <div class="w-32 h-32 bg-gray-200 rounded-full border-4 border-classic-gold flex items-center justify-center text-slate-800 text-4xl font-serif font-bold shadow-lg flex-shrink-0">
+                        李寄
+                    </div>
+                    
+                    <div class="flex-1 w-full">
+                        <h4 class="text-xl font-bold mb-4 text-classic-gold border-b border-gray-600 pb-2">基礎屬性 <span class="text-xs text-gray-400 font-normal ml-2">(點擊查看詳解)</span></h4>
+                        
+                        <!-- Interactive Stats Buttons -->
+                        <div class="grid grid-cols-5 gap-2 text-center mb-6">
+                            <button onclick="showStat('管', 2, '【統御】李寄年紀尚小且為平民，無官職權力，故數值較低。')" 
+                                    class="stat-btn bg-slate-700 rounded p-2 hover:bg-slate-600 transition duration-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 cursor-pointer">
+                                <div class="text-xs text-gray-400">管</div>
+                                <div class="font-bold text-lg">2</div>
+                            </button>
+
+                            <button onclick="showStat('智', 6, '【智慧】能想出「蜜餈誘蛇」與「放狗咬蛇」的計策，有勇有謀。')" 
+                                    class="stat-btn bg-slate-700 rounded p-2 hover:bg-slate-600 transition duration-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 cursor-pointer border border-yellow-500">
+                                <div class="text-xs text-yellow-400">智</div>
+                                <div class="font-bold text-lg text-yellow-400">6</div>
+                            </button>
+
+                            <button onclick="showStat('外', 11, '【外功/武力】手持好劍，能精準從後砍殺大蛇造成重創，殺傷力驚人。')" 
+                                    class="stat-btn bg-slate-700 rounded p-2 hover:bg-slate-600 transition duration-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 cursor-pointer border border-yellow-500">
+                                <div class="text-xs text-yellow-400">外</div>
+                                <div class="font-bold text-lg text-yellow-400">11</div>
+                            </button>
+
+                            <button onclick="showStat('內', 7, '【內力/意志】面對吞食無數少女的巨蛇，敢於主動請纓，內心意志強大。')" 
+                                    class="stat-btn bg-slate-700 rounded p-2 hover:bg-slate-600 transition duration-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 cursor-pointer">
+                                <div class="text-xs text-gray-400">內</div>
+                                <div class="font-bold text-lg">7</div>
+                            </button>
+
+                            <button onclick="showStat('輕', 5, '【輕功/身法】在洞口與蛇周旋，斬蛇後「緩步而歸」，雖非飛簷走壁，但步態從容。')" 
+                                    class="stat-btn bg-slate-700 rounded p-2 hover:bg-slate-600 transition duration-200 focus:outline-none focus:ring-2 focus:ring-yellow-400 cursor-pointer">
+                                <div class="text-xs text-gray-400">輕</div>
+                                <div class="font-bold text-lg">5</div>
+                            </button>
+                        </div>
+
+                        <!-- Description Box -->
+                        <div id="stat-info" class="bg-slate-900/50 p-4 rounded-lg min-h-[80px] flex items-center justify-center text-center text-gray-300 border border-slate-600 shadow-inner transition-all duration-300">
+                            <span class="animate-pulse">👈 請點擊上方屬性方塊查看分析</span>
+                        </div>
+
+                        <h4 class="text-xl font-bold mb-4 text-classic-gold border-b border-gray-600 pb-2 mt-6">戰鬥能力</h4>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-300">行動力</span>
+                                <span class="font-mono text-yellow-400">5/4</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-300">武力</span>
+                                <span class="font-mono text-yellow-400">7</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-300">氣血 (HP)</span>
+                                <div class="w-24 h-2 bg-gray-700 rounded-full overflow-hidden">
+                                    <div class="h-full bg-green-500" style="width: 100%"></div>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-gray-300">特殊技能</span>
+                                <span class="text-xs bg-red-600 px-2 py-1 rounded">斬蛇</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Hero's Journey Analysis (Updated with all heroes) -->
+        <section id="hero-journey" class="scroll-mt-20">
+            <div class="flex items-center gap-3 mb-6">
+                <div class="w-1 h-8 bg-classic-red"></div>
+                <h3 class="text-2xl font-serif font-bold text-slate-900">李寄的英雄之旅</h3>
+            </div>
+            
+            <div class="bg-yellow-50 border-l-4 border-classic-gold p-4 mb-8">
+                <h4 class="font-bold text-yellow-800 mb-2">英雄的定義</h4>
+                <p class="text-yellow-900 italic">「平定了別人認為不可能克服的障礙，不論出身，是以成就來論的。」</p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden">
+                <!-- Tab Headers -->
+                <div class="flex border-b border-gray-200 bg-gray-50 overflow-x-auto">
+                    <button onclick="switchTab('liji')" id="tab-liji" class="px-6 py-4 font-bold text-classic-red border-b-2 border-classic-red bg-white whitespace-nowrap">李寄 (本課主角)</button>
+                    <button onclick="switchTab('batman')" id="tab-batman" class="px-6 py-4 font-medium text-gray-500 hover:text-gray-700 whitespace-nowrap">蝙蝠俠</button>
+                    <button onclick="switchTab('superman')" id="tab-superman" class="px-6 py-4 font-medium text-gray-500 hover:text-gray-700 whitespace-nowrap">超人</button>
+                    <button onclick="switchTab('captain')" id="tab-captain" class="px-6 py-4 font-medium text-gray-500 hover:text-gray-700 whitespace-nowrap">美國隊長</button>
+                    <button onclick="switchTab('spiderman')" id="tab-spiderman" class="px-6 py-4 font-medium text-gray-500 hover:text-gray-700 whitespace-nowrap">蜘蛛人</button>
+                </div>
+
+                <!-- Tab Content: Li Ji -->
+                <div id="content-liji" class="p-6 md:p-8 animate-fade-in">
+                    <div class="space-y-6 relative">
+                        <!-- Connecting Line -->
+                        <div class="absolute left-4 top-4 bottom-4 w-0.5 bg-gray-200 hidden md:block"></div>
+
+                        <!-- Step 1 -->
+                        <div class="flex flex-col md:flex-row gap-4 relative">
+                            <div class="flex-shrink-0 w-8 h-8 bg-red-600 text-white rounded-full flex items-center justify-center font-bold z-10">1</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg text-gray-800">召喚 (契機)</h4>
+                                <p class="text-gray-600 mt-1">閩地有大蛇盤踞，需獻祭少女。李寄家中無子，雖父母不捨，但受到家庭命運與社會困境的「召喚」，主動請纓。</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="flex flex-col md:flex-row gap-4 relative">
+                            <div class="flex-shrink-0 w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold z-10">2</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg text-gray-800">啟程 (成長/裝備)</h4>
+                                <p class="text-gray-600 mt-1">
+                                    <span class="font-semibold text-orange-600">超自然助力(Supernatural Aid)：</span>看似平凡的寶劍、戰犬與米餈，在她的智慧運用下成為神器。
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="flex flex-col md:flex-row gap-4 relative">
+                            <div class="flex-shrink-0 w-8 h-8 bg-yellow-500 text-white rounded-full flex items-center justify-center font-bold z-10">3</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg text-gray-800">歷險 (挑戰/試驗之路)</h4>
+                                <p class="text-gray-600 mt-1">前往蛇穴，用米餈引蛇，放狗咬蛇，背後砍蛇。面對恐懼展現出非凡的機智與勇氣。</p>
+                            </div>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="flex flex-col md:flex-row gap-4 relative">
+                            <div class="flex-shrink-0 w-8 h-8 bg-green-600 text-white rounded-full flex items-center justify-center font-bold z-10">4</div>
+                            <div class="flex-1">
+                                <h4 class="font-bold text-lg text-gray-800">回歸 (使命)</h4>
+                                <p class="text-gray-600 mt-1">斬蛇後感嘆「汝曹怯弱」，象徵自我昇華。最終被封為王后，家族顯貴，證明女子也能成就驚天動地的大業。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Content: Batman -->
+                <div id="content-batman" class="p-6 md:p-8 hidden">
+                    <ul class="space-y-4">
+                        <li class="border-l-4 border-gray-800 pl-4 py-1"><strong>召喚：</strong>目睹雙親被殺，立志消滅犯罪。</li>
+                        <li class="border-l-4 border-gray-800 pl-4 py-1"><strong>啟程：</strong>遊歷世界學習戰鬥技藝，回到高譚市成為蝙蝠俠。</li>
+                        <li class="border-l-4 border-gray-800 pl-4 py-1"><strong>歷險：</strong>對抗小丑、班恩，面臨心理與道德考驗。</li>
+                        <li class="border-l-4 border-gray-800 pl-4 py-1"><strong>回歸：</strong>守護高譚市，將恐懼轉化為正義。</li>
+                    </ul>
+                </div>
+
+                <!-- Tab Content: Superman -->
+                <div id="content-superman" class="p-6 md:p-8 hidden">
+                     <ul class="space-y-4">
+                        <li class="border-l-4 border-blue-600 pl-4 py-1"><strong>召喚：</strong>發現自己來自氪星，擁有超能力。</li>
+                        <li class="border-l-4 border-blue-600 pl-4 py-1"><strong>啟程：</strong>在肯特家成長，學習控制力量與人類價值觀。</li>
+                        <li class="border-l-4 border-blue-600 pl-4 py-1"><strong>歷險：</strong>面對氪石弱點、索德將軍，思考神與人的平衡。</li>
+                        <li class="border-l-4 border-blue-600 pl-4 py-1"><strong>回歸：</strong>成為地球的守護者，展現希望。</li>
+                    </ul>
+                </div>
+
+                <!-- Tab Content: Captain America (Added) -->
+                <div id="content-captain" class="p-6 md:p-8 hidden">
+                     <ul class="space-y-4">
+                        <li class="border-l-4 border-blue-800 pl-4 py-1"><strong>召喚：</strong>受愛國心驅使，志願參軍但體弱。</li>
+                        <li class="border-l-4 border-blue-800 pl-4 py-1"><strong>啟程：</strong>接受超級士兵血清，成為象徵美國精神的超級戰士。</li>
+                        <li class="border-l-4 border-blue-800 pl-4 py-1"><strong>歷險：</strong>戰勝紅骷髏、九頭蛇組織，歷經時代變遷與個人信念衝突。</li>
+                        <li class="border-l-4 border-blue-800 pl-4 py-1"><strong>回歸：</strong>保護自由與正義，維持英雄精神，成為「活著的傳奇」。</li>
+                    </ul>
+                </div>
+
+                <!-- Tab Content: Spiderman (Added) -->
+                <div id="content-spiderman" class="p-6 md:p-8 hidden">
+                     <ul class="space-y-4">
+                        <li class="border-l-4 border-red-600 pl-4 py-1"><strong>召喚：</strong>叔叔之死讓彼得領悟「能力越大，責任越大」。</li>
+                        <li class="border-l-4 border-red-600 pl-4 py-1"><strong>啟程：</strong>學習如何使用蜘蛛能力，成為紐約的守護者。</li>
+                        <li class="border-l-4 border-red-600 pl-4 py-1"><strong>歷險：</strong>面對綠惡魔、章魚博士等敵人，亦經歷個人損失與成長。</li>
+                        <li class="border-l-4 border-red-600 pl-4 py-1"><strong>回歸：</strong>以普通人的視角維持正義，承擔英雄責任，平衡個人生活與英雄身份。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Conclusion -->
+        <section id="conclusion" class="bg-slate-50 p-8 rounded-xl border border-gray-200">
+             <div class="flex items-center gap-3 mb-6">
+                <div class="w-1 h-8 bg-classic-red"></div>
+                <h3 class="text-2xl font-serif font-bold text-slate-900">總結與反思</h3>
+            </div>
+            <div class="prose max-w-none text-gray-700">
+                <p class="mb-4">
+                    李寄同妖蛇的搏鬥，實質上也是<strong>與自己的不幸命運搏鬥</strong>。當她以智慧與勇敢斬殺了妖蛇，也就等於斬掉了罩在她頭上的不幸命運羅網。
+                </p>
+                <p>
+                    這篇文章是對傳統「男尊女卑」觀念的有力否定。干寶通過故事證明：<strong>女子同樣可以做出驚天動地的大事業，生女未嘗不可以顯耀家族。</strong>
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-gray-400 py-8 text-center text-sm">
+        <p>© 2024 文本解讀互動教材 | 李寄斬蛇</p>
+    </footer>
+
+    <!-- JavaScript for Interactions -->
+    <script>
+        // Hero Journey Tabs Logic
+        function switchTab(tabName) {
+            const contents = ['liji', 'batman', 'superman', 'captain', 'spiderman'];
+            
+            // Hide all content areas
+            contents.forEach(c => {
+                const el = document.getElementById('content-' + c);
+                if(el) el.classList.add('hidden');
+            });
+            
+            // Reset all tab buttons
+            contents.forEach(t => {
+                const tabBtn = document.getElementById('tab-' + t);
+                if(tabBtn) {
+                    tabBtn.classList.remove('text-classic-red', 'border-b-2', 'border-classic-red', 'bg-white');
+                    tabBtn.classList.add('text-gray-500');
+                }
+            });
+
+            // Show selected content
+            const selectedContent = document.getElementById('content-' + tabName);
+            if(selectedContent) selectedContent.classList.remove('hidden');
+            
+            // Activate selected tab button
+            const activeTab = document.getElementById('tab-' + tabName);
+            if(activeTab) {
+                activeTab.classList.remove('text-gray-500');
+                activeTab.classList.add('text-classic-red', 'border-b-2', 'border-classic-red', 'bg-white');
+            }
+        }
+
+        // Character Stats Logic
+        function showStat(name, value, description) {
+            const infoBox = document.getElementById('stat-info');
+            
+            // Highlight selected button
+            const buttons = document.querySelectorAll('.stat-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+
+            // Update info text with fade effect
+            infoBox.style.opacity = '0';
+            setTimeout(() => {
+                infoBox.innerHTML = `<span class="font-bold text-yellow-400 text-lg mr-2">${name} (${value}):</span> ${description}`;
+                infoBox.style.opacity = '1';
+            }, 150);
+        }
+    </script>
+</body>
+</html>
